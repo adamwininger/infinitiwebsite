@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get Your Free Audit | Infiniti Payments</title>
+<title>Visa VAMP Risk Audit | Infiniti Payments</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -395,6 +395,42 @@ footer { position: relative; z-index: 1; padding: 80px 0 40px; border-top: 1px s
 }
 
 
+.vamp-escalation { display: flex; flex-direction: column; gap: 0; max-width: 600px; margin: 40px auto 0; }
+.vamp-step { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; position: relative; }
+.vamp-step::before { content: ''; position: absolute; left: 15px; top: 40px; bottom: 0; width: 2px; background: linear-gradient(180deg, #f87171, #ef4444); }
+.vamp-step:last-child::before { display: none; }
+.vamp-step .step-dot { width: 32px; height: 32px; min-width: 32px; border-radius: 50%; background: rgba(248,113,113,0.12); border: 2px solid #f87171; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: #f87171; }
+.vamp-step p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+.vamp-step p strong { color: var(--text-primary); }
+
+.what-we-do-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+.wwd-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+.wwd-card:hover { background: var(--bg-card-hover); border-color: var(--border-hover); transform: translateY(-3px); }
+.wwd-card .wwd-icon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px; }
+.wwd-card:nth-child(1) .wwd-icon { background: rgba(79,143,255,0.1); border: 1px solid rgba(79,143,255,0.15); }
+.wwd-card:nth-child(2) .wwd-icon { background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.15); }
+.wwd-card:nth-child(3) .wwd-icon { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.15); }
+.wwd-card:nth-child(4) .wwd-icon { background: rgba(167,139,250,0.1); border: 1px solid rgba(167,139,250,0.15); }
+.wwd-card h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.01em; }
+.wwd-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
+
+.who-criteria { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px; }
+.who-item { display: flex; align-items: flex-start; gap: 14px; padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; }
+.who-item .who-icon { width: 40px; height: 40px; min-width: 40px; border-radius: 12px; background: rgba(79,143,255,0.08); border: 1px solid rgba(79,143,255,0.12); display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+.who-item p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; }
+
+.services-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: start; }
+.services-list { display: flex; flex-direction: column; gap: 20px; }
+.services-list .svc { padding: 20px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; }
+.services-list .svc h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--accent-1); }
+.services-list .svc p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+
+@media (max-width: 1024px) {
+  .what-we-do-grid { grid-template-columns: 1fr; }
+  .who-criteria { grid-template-columns: 1fr; }
+  .services-detail { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -423,79 +459,167 @@ footer { position: relative; z-index: 1; padding: 80px 0 40px; border-top: 1px s
 
 <div class="page-hero centered">
   <div class="container">
-    <div class="hero-badge reveal"><span class="dot"></span>Free · No Obligation</div>
-    <h1>Get your free<br><span class="gradient-text">payments audit.</span></h1>
-    <p class="hero-desc">In 10 minutes, we'll show you exactly how much you're overpaying — and what we can do about it. No commitment required.</p>
+    <div class="hero-badge reveal"><span class="dot"></span>Visa VAMP Risk Audit</div>
+    <h1>How Visa VAMP Can<br><span class="gradient-text">Disrupt Your Revenue</span></h1>
+    <p class="hero-desc">Most merchants don't realize they're one incident away from a VAMP-triggered shutdown. We'll show you exactly where your risks are — and how to fix them before they become expensive.</p>
+    <div class="cta-buttons">
+      <a href="/join" class="btn-primary btn-lg">Get Your Free VAMP Risk Audit →</a>
+    </div>
   </div>
 </div>
 
+<!-- Escalation Warning -->
+<section style="border-top:1px solid var(--border);">
+  <div class="container" style="max-width:900px;">
+    <div class="section-label reveal">The Risk</div>
+    <h2 class="section-title reveal">Visa's VAMP Rules Just Tightened.<br><span class="gradient-text">Are You Ready?</span></h2>
+    <p class="section-desc reveal">Visa's Acquirer Monitoring Program (VAMP) is quietly reshaping risk for mid-market merchants. If you rely on a single processor, have rising disputes, or operate in a flagged industry, you may already be on the radar — without knowing it.</p>
+    <p class="section-desc reveal" style="margin-top:16px;">A VAMP escalation can freeze your processing, halt revenue, and trigger costly remediation. <strong style="color:var(--text-primary);">Most merchants only find out when it's too late.</strong></p>
+
+    <div class="vamp-escalation reveal">
+      <div class="vamp-step"><div class="step-dot">1</div><p><strong>Suddenly, you're flagged under Visa VAMP</strong></p></div>
+      <div class="vamp-step"><div class="step-dot">2</div><p><strong>Your processor tightens controls</strong></p></div>
+      <div class="vamp-step"><div class="step-dot">3</div><p><strong>You may face volume caps or reserves</strong></p></div>
+      <div class="vamp-step"><div class="step-dot">4</div><p><strong>Your account becomes "high-touch"</strong></p></div>
+      <div class="vamp-step"><div class="step-dot">5</div><p><strong>Shutdown becomes a real possibility</strong></p></div>
+    </div>
+
+    <p class="section-desc reveal" style="margin-top:32px;">Your processor isn't monitoring the signals Visa cares about — dispute ratios, approval volatility, descriptor issues, and qualification errors. Without oversight, VAMP exposure builds silently until you're flagged.</p>
+    <div style="text-align:center;margin-top:32px;" class="reveal">
+      <a href="/join" class="btn-primary">Get Your Free VAMP Risk Audit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- What We Do -->
 <section style="border-top:1px solid var(--border);">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
-      <div class="reveal">
-        <div class="consulting-visual-card" id="audit-form-card">
-          <div class="dash-header"><h3>Request Your Audit</h3><span class="dash-badge">Free</span></div>
-          <form id="audit-form" style="display:flex;flex-direction:column;gap:20px;">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-              <div class="form-group"><label>First Name</label><input type="text" class="form-input" placeholder="John" required></div>
-              <div class="form-group"><label>Last Name</label><input type="text" class="form-input" placeholder="Smith" required></div>
-            </div>
-            <div class="form-group"><label>Business Email</label><input type="email" class="form-input" placeholder="john@company.com" required></div>
-            <div class="form-group"><label>Company Name</label><input type="text" class="form-input" placeholder="Acme Corp" required></div>
-            <div class="form-group"><label>Phone</label><input type="tel" class="form-input" placeholder="(555) 000-0000"></div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-              <div class="form-group"><label>Monthly Processing Volume</label><select class="form-input"><option value="">Select range...</option><option>Under $50K</option><option>$50K – $250K</option><option>$250K – $1M</option><option>$1M – $5M</option><option>$5M+</option></select></div>
-              <div class="form-group"><label>Service Interest</label><select class="form-input"><option value="">Select...</option><option>Dual Pricing</option><option>Traditional Processing</option><option>Consulting Only</option><option>Free Audit First</option></select></div>
-            </div>
-            <div class="form-group"><label>Tell us about your business</label><textarea class="form-input" placeholder="Briefly describe your current setup, challenges, or what prompted you to reach out..."></textarea></div>
-            <button type="submit" class="btn-primary btn-lg" style="width:100%;justify-content:center;">Submit Free Audit Request →</button>
-            <p style="font-size:0.78rem;color:var(--text-muted);text-align:center;">By submitting, you agree to our Terms. We'll never share your info.</p>
-          </form>
-          <div id="form-success" style="display:none;text-align:center;padding:40px 0;">
-            <div style="font-size:3rem;margin-bottom:16px;">✓</div>
-            <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;margin-bottom:12px;">Request Received!</h3>
-            <p style="color:var(--text-secondary);font-size:0.92rem;">Our team will reach out within 24 hours to schedule your free audit. Check your email for a confirmation.</p>
-          </div>
-        </div>
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">What We Do</div>
+      <h2 class="section-title reveal">We Audit. We Protect.<br><span class="gradient-text">We Monitor. We Optimize.</span></h2>
+    </div>
+    <div class="what-we-do-grid">
+      <div class="wwd-card reveal">
+        <div class="wwd-icon">🔍</div>
+        <h3>Comprehensive Audit</h3>
+        <p>We map your current setup, identify VAMP exposure, and quantify risks — including dispute ratios, processor dependencies, and compliance gaps.</p>
       </div>
-      <div class="reveal reveal-delay-2">
-        <div class="section-label">What to Expect</div>
-        <div class="section-title" style="font-size:clamp(1.5rem,2.5vw,2rem);">Here's what happens<br><span class="gradient-text">after you submit.</span></div>
-        <div style="display:flex;flex-direction:column;gap:24px;margin-top:32px;">
-          <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:40px;height:40px;border-radius:12px;background:var(--accent-gradient);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;color:#06080d;flex-shrink:0;">1</div>
-            <div><h4 style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:4px;">We review your info</h4><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;">Our team reviews your submission and prepares for your audit.</p></div>
-          </div>
-          <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:40px;height:40px;border-radius:12px;background:var(--accent-gradient);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;color:#06080d;flex-shrink:0;">2</div>
-            <div><h4 style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:4px;">10-minute discovery call</h4><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;">Quick call to understand your business and current setup.</p></div>
-          </div>
-          <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:40px;height:40px;border-radius:12px;background:var(--accent-gradient);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;color:#06080d;flex-shrink:0;">3</div>
-            <div><h4 style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:4px;">Statement analysis</h4><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;">We analyze your processing statement line by line.</p></div>
-          </div>
-          <div style="display:flex;gap:16px;align-items:flex-start;">
-            <div style="width:40px;height:40px;border-radius:12px;background:var(--accent-gradient);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;color:#06080d;flex-shrink:0;">4</div>
-            <div><h4 style="font-family:var(--font-display);font-weight:700;font-size:0.95rem;margin-bottom:4px;">Your savings report</h4><p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.6;">Receive a detailed report showing exactly where you're overpaying and how much you can save.</p></div>
-          </div>
-        </div>
+      <div class="wwd-card reveal">
+        <div class="wwd-icon">🔬</div>
+        <h3>Root Analysis</h3>
+        <p>Our team identifies the structural issues that create VAMP exposure — from qualification settings to routing inefficiencies that quietly push merchants toward scrutiny.</p>
+      </div>
+      <div class="wwd-card reveal">
+        <div class="wwd-icon">⚙️</div>
+        <h3>Implementation</h3>
+        <p>We handle the changes. Whether reconfiguring your current processor, correcting qualification settings, or deploying dual-MID redundancy, we do the heavy lifting.</p>
+      </div>
+      <div class="wwd-card reveal">
+        <div class="wwd-icon">📊</div>
+        <h3>Ongoing Monitoring</h3>
+        <p>VAMP isn't a one-time concern — it's an ongoing risk. We monitor your account monthly, catch early warning signs, and prevent small issues from becoming escalations.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div style="margin-top:48px;padding:28px;background:rgba(0,212,170,0.04);border:1px solid rgba(0,212,170,0.12);border-radius:16px;">
-          <div style="font-family:var(--font-display);font-weight:800;font-size:1.1rem;margin-bottom:8px;">🛡️ No-Risk Guarantee</div>
-          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.7;">If we can't save you money, we'll tell you. The audit is 100% free and comes with zero obligation. Keep the insights whether you work with us or not.</p>
+<!-- Who This Is For -->
+<section style="border-top:1px solid var(--border);">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Who This Is For</div>
+      <h2 class="section-title reveal">Built for mid-market merchants<br><span class="gradient-text">who take risk seriously.</span></h2>
+    </div>
+    <div class="services-detail reveal">
+      <div class="services-list">
+        <div class="svc"><h4>Exposure Mapping</h4><p>We identify the hidden drivers of VAMP risk: rising disputes, approval inconsistencies, MCC mismatches, and processor-level vulnerabilities.</p></div>
+        <div class="svc"><h4>Remediation &amp; Optimization</h4><p>We fix the underlying issues — from qualification errors to routing inefficiencies — that quietly push merchants toward VAMP scrutiny.</p></div>
+        <div class="svc"><h4>Redundant Architecture</h4><p>We build a safer, more resilient processing setup that reduces dependency on any single processor and minimizes VAMP impact.</p></div>
+        <div class="svc"><h4>Continuous Oversight</h4><p>We monitor your account monthly, catching early warning signs like dispute spikes or approval drops long before they trigger VAMP escalation.</p></div>
+      </div>
+      <div>
+        <div class="who-criteria">
+          <div class="who-item reveal"><div class="who-icon">💳</div><p>Process $500k+ annually in card volume</p></div>
+          <div class="who-item reveal"><div class="who-icon">🔗</div><p>Have complex payment environments (multiple locations, channels, or systems)</p></div>
+          <div class="who-item reveal"><div class="who-icon">🤝</div><p>Want a consultative partner, not just a processor or one-time fix</p></div>
+          <div class="who-item reveal"><div class="who-icon">⚠️</div><p>Merchants who've received a VAMP warning — or fear one is coming</p></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-document.getElementById('audit-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  this.style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
-});
-</script>
+<!-- Pricing -->
+<section style="border-top:1px solid var(--border);">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="section-label reveal" style="justify-content:center;">Pricing</div>
+      <h2 class="section-title reveal">Transparent. <span class="gradient-text">No surprises.</span></h2>
+    </div>
+    <div class="pricing-grid" style="margin-top:40px;">
+      <div class="pricing-card reveal">
+        <div class="pricing-tag">Upfront Analysis</div>
+        <div class="pricing-amount">Complimentary</div>
+        <p class="pricing-note">No contract required</p>
+        <a href="/join" class="btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+        <ul class="pricing-features">
+          <li>Complete merchant account analysis</li>
+          <li>Processing fee breakdown</li>
+          <li>Payments stack review</li>
+          <li>Expert report card</li>
+        </ul>
+      </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-tag">Optimization</div>
+        <div class="pricing-amount">Included</div>
+        <p class="pricing-note">Included with engagement</p>
+        <a href="/join" class="btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+        <ul class="pricing-features">
+          <li>Merchant account optimization</li>
+          <li>Work with your processor</li>
+          <li>Streamlined payments setup</li>
+          <li>Portion of realized savings</li>
+        </ul>
+      </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-tag">Consulting</div>
+        <div class="pricing-amount">Included</div>
+        <p class="pricing-note">Included with engagement</p>
+        <a href="/join" class="btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+        <ul class="pricing-features">
+          <li>Merchant account education</li>
+          <li>Payments stack deep-dive</li>
+          <li>Processor charge explanations</li>
+          <li>Team collaboration</li>
+        </ul>
+      </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-tag">Reporting</div>
+        <div class="pricing-amount">Included</div>
+        <p class="pricing-note">Included with engagement</p>
+        <a href="/join" class="btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+        <ul class="pricing-features">
+          <li>Processing fee reports</li>
+          <li>Transaction analysis</li>
+          <li>Effective rate calculations</li>
+          <li>Trend insights</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="border-top:1px solid var(--border);">
+  <div class="container">
+    <h2 class="section-title reveal">Book a 10 Minute Call Today<br><span class="gradient-text">to Prevent a VAMP Shutdown</span></h2>
+    <p class="section-desc reveal">Don't wait until Visa flags your account. Get ahead of the risk with a free, no-obligation audit.</p>
+    <div class="cta-buttons reveal">
+      <a href="/join" class="btn-primary btn-lg">Get Your Free Audit →</a>
+    </div>
+    <p class="cta-note reveal">Free · No obligation · Results in 48 hours</p>
+  </div>
+</section>
 
 <footer>
   <div class="container">

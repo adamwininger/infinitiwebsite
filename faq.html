@@ -9,12 +9,12 @@
 <style>
 
 :root {
-  --bg-primary: #06080d;
-  --bg-secondary: #0a0e18;
-  --bg-card: rgba(255,255,255,0.03);
-  --bg-card-hover: rgba(255,255,255,0.06);
-  --border: rgba(255,255,255,0.06);
-  --border-hover: rgba(255,255,255,0.12);
+  --bg-primary: #111827;
+  --bg-secondary: #1a2332;
+  --bg-card: rgba(255,255,255,0.05);
+  --bg-card-hover: rgba(255,255,255,0.09);
+  --border: rgba(255,255,255,0.08);
+  --border-hover: rgba(255,255,255,0.16);
   --text-primary: #f0f2f5;
   --text-secondary: #8a92a6;
   --text-muted: #5a6378;
@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
 
 /* === NAVIGATION === */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 20px 0; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-nav.scrolled { padding: 12px 0; background: rgba(6,8,13,0.85); backdrop-filter: blur(24px) saturate(180%); border-bottom: 1px solid var(--border); }
+nav.scrolled { padding: 12px 0; background: rgba(17,24,39,0.92); backdrop-filter: blur(24px) saturate(180%); border-bottom: 1px solid var(--border); }
 nav .container { display: flex; align-items: center; justify-content: space-between; }
 .nav-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em; }
 .nav-logo .logo-icon { width: 36px; height: 36px; border-radius: 10px; background: var(--accent-gradient); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 900; color: #06080d; }
@@ -85,6 +85,7 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(79,143,255,0.3); }
 .btn-primary:hover::before { opacity: 1; }
 .nav-links .btn-primary::after { display: none; }
+.nav-links .btn-primary { background: var(--accent-gradient); color: #111827; font-weight: 800; padding: 10px 24px; box-shadow: 0 0 20px rgba(79,143,255,0.3), 0 0 60px rgba(0,212,170,0.1); }
 
 .btn-secondary {
   display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px;
@@ -100,7 +101,7 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .mobile-toggle span { width: 24px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: all 0.3s; }
 
 /* === SECTION STYLES === */
-section { position: relative; z-index: 1; padding: 120px 0; }
+section { position: relative; z-index: 1; padding: 64px 0; }
 
 .section-label {
   display: inline-flex; align-items: center; gap: 8px;
@@ -118,7 +119,7 @@ section { position: relative; z-index: 1; padding: 120px 0; }
 .section-desc { font-size: 1.05rem; color: var(--text-secondary); max-width: 600px; line-height: 1.75; }
 
 /* === PAGE HERO (subpages) === */
-.page-hero { position: relative; z-index: 1; min-height: 50vh; display: flex; align-items: center; padding: 160px 0 80px; }
+.page-hero { position: relative; z-index: 1; min-height: auto; display: flex; align-items: center; padding: 140px 0 48px; }
 .page-hero.centered { text-align: center; }
 .page-hero.centered .section-label { justify-content: center; }
 .page-hero.centered .section-desc { margin-left: auto; margin-right: auto; }
@@ -126,7 +127,7 @@ section { position: relative; z-index: 1; padding: 120px 0; }
 .page-hero .hero-desc { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.75; max-width: 640px; margin-bottom: 40px; }
 
 /* === HERO (homepage) === */
-.hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; padding: 140px 0 100px; }
+.hero { position: relative; z-index: 1; min-height: auto; display: flex; align-items: center; padding: 130px 0 48px; }
 .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px 6px 8px; background: rgba(79,143,255,0.08); border: 1px solid rgba(79,143,255,0.15); border-radius: 50px; font-size: 0.78rem; font-weight: 600; color: var(--accent-1); margin-bottom: 28px; letter-spacing: 0.03em; }
 .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-2); animation: pulse 2s ease-in-out infinite; }
@@ -301,7 +302,7 @@ section { position: relative; z-index: 1; padding: 120px 0; }
 .industry-card .ic-metrics { display: flex; gap: 24px; padding-top: 20px; border-top: 1px solid var(--border); }
 
 /* === CTA SECTION === */
-.cta-section { text-align: center; padding: 140px 0; }
+.cta-section { text-align: center; padding: 72px 0; }
 .cta-section .section-title { max-width: 700px; margin: 0 auto 20px; }
 .cta-section .section-desc { margin: 0 auto 48px; text-align: center; max-width: 560px; }
 .cta-buttons { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
@@ -370,11 +371,11 @@ footer { position: relative; z-index: 1; padding: 80px 0 40px; border-top: 1px s
 
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
-  section { padding: 80px 0; }
+  section { padding: 48px 0; }
   .nav-links {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     flex-direction: column; padding: 24px 20px; gap: 0;
-    background: rgba(6,8,13,0.96); backdrop-filter: blur(24px);
+    background: rgba(17,24,39,0.96); backdrop-filter: blur(24px);
     border-bottom: 1px solid var(--border);
   }
   .nav-links.show { display: flex; }
@@ -382,7 +383,7 @@ footer { position: relative; z-index: 1; padding: 80px 0 40px; border-top: 1px s
   .nav-links a:last-child { border-bottom: none; margin-top: 12px; }
   .nav-links a.active::after { display: none; }
   .mobile-toggle { display: flex; }
-  .hero { padding: 120px 0 60px; min-height: auto; }
+  .hero { padding: 110px 0 36px; min-height: auto; }
   .hero-cta { flex-direction: column; align-items: flex-start; }
   .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
   .testimonial-card { flex: 0 0 320px; }
@@ -390,7 +391,7 @@ footer { position: relative; z-index: 1; padding: 80px 0 40px; border-top: 1px s
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .float-card { display: none; }
-  .page-hero { padding: 130px 0 60px; min-height: auto; }
+  .page-hero { padding: 120px 0 36px; min-height: auto; }
 }
 
 
@@ -493,6 +494,7 @@ footer { position: relative; z-index: 1; padding: 80px 0 40px; border-top: 1px s
         <h4>Resources</h4>
         <a href="/support">Support</a>
         <a href="/faq">FAQ</a>
+        <a href="/visa-vamp">Visa VAMP</a>
         <a href="/careers">Careers</a>
       </div>
       <div class="footer-col">
