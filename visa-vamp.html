@@ -553,7 +553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section style="border-top:1px solid var(--border);">
   <div class="container">
     <div style="text-align:center; max-width:800px; margin:0 auto;">
-      <h2 class="section-title reveal">What Is <span class="gradient-text">Vamp</span>?</h2>
+      <h2 class="section-title reveal">What Is <span class="gradient-text">Vamp?</span></h2>
       <p class="section-desc reveal" style="margin:16px auto 0;">Visa’s Acquirer Monitoring Program (VAMP) is the unified framework that replaced the older Visa Fraud Monitoring Program (VFMP) and Visa Dispute Monitoring Program (VDMP). Instead of tracking fraud and disputes separately, VAMP evaluates both under a single, stricter metric that applies to acquirers and, indirectly, to the merchants they board. This shift has created new exposure points for businesses with rising disputes, inconsistent approval rates, or single‑processor dependencies.
 </p>
     </div>
@@ -568,6 +568,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 class="section-title reveal">Visa's VAMP rules just tightened. <span class="gradient-text">Are you ready?</span></h2>
       <p class="section-desc reveal" style="margin:16px auto 0;">Visa's Acquirer Monitoring Program is quietly reshaping risk for mid-market merchants. If you rely on a single processor, have rising disputes, or operate in a flagged industry, you may already be on the radar — without knowing it. A VAMP escalation can freeze your processing, halt revenue, and trigger costly remediation.</p>
       <p class="section-desc reveal" style="margin:16px auto 0;"><strong style="color:var(--text-primary);">Your processor isn't monitoring the signals Visa cares about</strong> — dispute ratios, approval volatility, descriptor issues, and qualification errors. Without oversight, VAMP exposure builds silently until you're flagged.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- How VAMP Measures Risk -->
+<section style="border-top:1px solid var(--border);">
+  <div class="container">
+    <div style="text-align:center; max-width:800px; margin:0 auto;">
+      <h2 class="section-title reveal">How VAMP  <span class="gradient-text">Measures Risk</span></h2>
+      <p class="section-desc reveal" style="margin:16px auto 0;">VAMP calculates a combined ratio using three core data points:
+        ul>
+      <li>TC40 fraud reports (confirmed fraud events)</li>
+      <li>All disputes</li>
+      <li>Total settled transactions</li>
+    </ul>
+      <p>
+    <p class="section-desc reveal" style="margin:16px auto 0;">
+      Because TC40 reports often precede or accompany disputes, many transactions are effectively
+      double‑counted, which pushes ratios higher than merchants expect. Only card‑not‑present
+      transactions are included, and merchants with fewer than 1,500 qualifying transactions are
+      excluded from monitoring.
+    </p>
+
+    <h3>Enumeration Ratio (Card Testing Attacks)</h3>
+    <p class="section-desc reveal" style="margin:16px auto 0;">
+      VAMP also tracks a separate enumeration ratio, which measures card‑testing activity using
+      Visa’s Account Attack Intelligence (VAAI). Merchants with fewer than 300,000 enumerated
+      transactions are excluded, but those above the threshold face additional scrutiny and
+      potential enforcement.
+    </p>
     </div>
   </div>
 </section>
